@@ -1,0 +1,26 @@
+@import "src/app/variables.module";
+@import "src/app/fonts.module";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+
+  p {
+    cursor: pointer;
+  }
+
+  .page {
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: $card-color;
+    cursor: pointer;
+    color: $color-white;
+
+    &.active {
+      background-color: $primary-color;
+    }
+  }
+}

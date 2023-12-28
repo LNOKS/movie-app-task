@@ -1,0 +1,50 @@
+@import "src/app/variables.module";
+@import "src/app/mixin.module";
+
+.container {
+
+
+  .input {
+    width: 100%;
+    height: 45px;
+    border-radius: 10px;
+    background-color: $input-color;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border: none;
+    outline: none;
+
+    @include bodySmall;
+    color: $color-white;
+
+    &::placeholder {
+      @include bodySmall;
+      color: $color-white;
+    }
+
+    &:focus {
+      border-width: 1px;
+      border-style: solid;
+    }
+  }
+
+  .inputError {
+
+    border-color: $error-color;
+    border-width: 1px;
+    border-style: solid;
+
+    &:focus {
+      border-color: $error-color;
+    }
+  }
+
+
+  .errorMessage {
+    margin-top: 8px;
+    @include bodyExtraSmall;
+    color: $error-color;
+  }
+}

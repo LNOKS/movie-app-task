@@ -1,0 +1,19 @@
+@import "variables.module";
+
+.body {
+  background-color: $background-color;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+
+  .waveGradientBackground{
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    overflow-x: hidden;
+
+    bottom: 0;
+    left: 0;
+    object-fit: contain;
+  }
+}

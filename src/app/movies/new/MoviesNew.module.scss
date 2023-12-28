@@ -1,0 +1,56 @@
+@import "src/app/variables.module";
+@import "src/app/mixin.module";
+
+.container {
+  padding-top: 120px;
+  padding-left: 120px;
+
+  .header {
+    @include headingTwo;
+    color: $color-white;
+
+    margin-bottom: 120px;
+  }
+
+  .body {
+    display: flex;
+    column-gap: 127px;
+
+    .fileUpload {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 8px;
+      width: 473px;
+      height: 504px;
+      border-radius: 10px;
+      border: 2px $color-white dashed;
+      cursor: pointer;
+
+      p {
+        @include bodySmall;
+        color: $color-white;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+
+      .fields {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+      }
+    }
+  }
+}
+

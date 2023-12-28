@@ -1,0 +1,48 @@
+@import "src/app/variables.module";
+@import "src/app/mixin.module";
+@import "src/app/fonts.module";
+
+.container {
+  padding: 120px;
+  height: 100vh;
+  width: 100vw;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 120px;
+
+
+    .heading {
+      @include headingTwo;
+      color: $color-white;
+
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    .logout {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        cursor: pointer;
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  .moviesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}

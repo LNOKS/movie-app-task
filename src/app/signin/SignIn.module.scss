@@ -1,0 +1,36 @@
+@import "src/app/mixin.module";
+@import "src/app/variables.module";
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+
+  .signIn {
+    @include headingOne;
+    color: $color-white;
+    margin-bottom: 40px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 300px;
+  }
+
+  .rememberMeContainer{
+    display: flex;
+    gap: 8px;
+    p {
+      @include bodySmall;
+        color: $color-white;
+    }
+  }
+
+}

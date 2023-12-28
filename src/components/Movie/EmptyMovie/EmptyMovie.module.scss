@@ -1,0 +1,20 @@
+@import "src/app/variables.module";
+@import "src/app/mixin.module";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    align-items: center;
+
+  gap: 40px;
+
+  .listEmptyText{
+    @include headingTwo;
+    color: $color-white;
+  }
+
+  .addNewMovie {
+    width: 202px;
+  }
+}

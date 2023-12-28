@@ -1,0 +1,12 @@
+@import "mixin.module";
+
+
+
+.headingOne {
+  @include headingOne;
+}
+
+
+.bodyRegular {
+  @include bodyRegular;
+}

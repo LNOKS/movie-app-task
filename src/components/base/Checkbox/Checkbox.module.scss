@@ -1,0 +1,35 @@
+@import "src/app/variables.module";
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  background-color: $input-color;
+  border-radius: 5px;
+}
+
+.checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+
+  &:checked {
+    background-color: $input-color;
+    border-color: $input-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 18px;
+      background-color: $checked-color;
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
