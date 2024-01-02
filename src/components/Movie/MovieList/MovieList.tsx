@@ -43,14 +43,21 @@ export default function MoviesList() {
 			const response = await getMovies({ page, limit } as PaginationDto);
 			const totalMovies = response.total;
 			setMovies(response.data);
-			setTotalPages(Math.ceil(totalMovies / limit));
+			const totalPages = Math.ceil(totalMovies / limit);
+			if (totalPages > 0) {
+				setTotalPages(totalPages);
+			}
 			setIsLoading(false);
 		};
 		fetchMovies();
 	}, [page]);
 
-	if (movies && movies.length === 0 && page < totalPages) {
-		return <EmptyMovie />;
+	if (movies && movies.length === 0 && page <= totalPages) {
+		return (
+			<div className={styles.emptyList}>
+				<EmptyMovie />
+			</div>
+		);
 	}
 
 	return (

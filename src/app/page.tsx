@@ -10,7 +10,7 @@ export default async function Home() {
 		redirect('/signin');
 	}
 	return (
-		<main>
+		<main style={{ height: '100vh' }}>
 			<MoviesList />
 		</main>
 	);
